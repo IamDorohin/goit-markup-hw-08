@@ -1,0 +1,43 @@
+.clients {
+    @include verticalCentredPaddings(94px);
+}
+
+.clients__title {
+    margin-bottom: 50px;
+}
+
+.clients__list {
+    @extend %list;
+    @include centred-Flex();
+    padding-left: 0;
+}
+
+.clients__list .clients__name + .clients__name {
+    margin-left: 30px;
+}
+
+.clients__name {
+    display: flex;
+    margin: 0;
+}
+
+.clients__link {
+    @include centred-Flex();
+    width: 170px;
+    height: 92px;
+    color: #AFB1B8;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+
+    @include animation(color);
+    @include animation(border);
+
+    &:hover, &:focus {
+        color: $accent-color;
+        border: 1px solid $accent-color;
+    }
+}
+
+.clients__logo {
+    fill: currentColor;
+}

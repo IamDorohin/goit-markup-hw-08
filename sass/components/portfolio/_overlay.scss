@@ -1,0 +1,28 @@
+.overlay {
+    position: relative;
+    overflow: hidden;
+    width: 370px;
+    height: 294px;
+}
+
+.overlay__description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 63px 24px;
+    font-size: 18px;
+    line-height: 1.56;
+    color: #ffffff;
+    background-color: rgba(33, 150, 243, 0.9);
+
+    transform: translateY(101%);
+
+    @include animation(transform);
+
+    .project-card:hover &,
+    .project-card:focus & {
+        transform: translateY(0%);
+    }
+}

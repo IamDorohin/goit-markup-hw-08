@@ -1,0 +1,45 @@
+.social-networks {
+    display: inline-block;
+    margin-left: 70px;
+}
+
+.social-networks__title {
+    display: inline-block;
+    height: 16px;
+    font-weight: 700;
+    line-height: 1.17;
+    letter-spacing: 0,03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.social-networks__list {
+    @extend %list;
+    display: flex;
+    padding-left: 0;
+}
+
+.social-networks__link {
+    @include centred-Flex();
+    width: 44px;
+    height: 44px;
+
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+
+    @include animation(background-color);
+
+
+    &:hover, &:focus {
+        background-color: $accent-color;
+    }
+}
+
+.social-networks__icon {
+    fill: currentColor;
+}
+
+.social-networks__item + .social-networks__item {
+    margin-left: 10px;
+}

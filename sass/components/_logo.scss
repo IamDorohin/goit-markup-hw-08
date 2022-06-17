@@ -1,0 +1,18 @@
+.logo-header {
+    @extend %logo;
+    margin-right: 93px;
+}
+
+.logo--colored {
+    color: #000000;
+}
+
+.logo-footer {
+    @extend %logo;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.logo--inverse {
+    color: #ffffff
+}
