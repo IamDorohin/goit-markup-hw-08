@@ -246,7 +246,7 @@ p {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
   .contacts .contacts__items + .contacts__items {
     margin-top: 10px;
   }
@@ -1350,7 +1350,6 @@ p {
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-    width: 450px;
   }
 }
 
