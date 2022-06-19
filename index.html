@@ -16,13 +16,39 @@
 <!--Header-->
     <header>
         <div class="page-header container">
-            <a href="./index.html" class="logo-header">Web<span class="logo--colored">Studio</span>
+            <a href="./index.html" class="logo logo-header">Web<span class="logo--colored">Studio</span>
             </a>
-            <nav>
-                <ul class="site-nav">
-                    <li class="site-nav__item"> <a href="./index.html" class="site-nav__link current">Студия</a></li>
-                    <li class="site-nav__item"> <a href="./portfolio.html" class="site-nav__link">Портфолио</a></li>
-                    <li class="site-nav__item"> <a href="" class="site-nav__link">Контакты</a></li>
+            <button
+            type="button"
+            class="page-header__button js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu">
+                <svg
+                class="page-header__icon"
+                width="40"
+                height="40"
+                aria-label="Переключатель мобильного меню">
+                    <use
+                    href="./images/symbol-defs.svg#icon-menu_24px"></use>
+                </svg>
+            </button>
+            <nav class="site-nav">
+                <ul class="site-nav__list">
+                    <li class="site-nav__item">
+                        <a href="./index.html" class="site-nav__link current">
+                            Студия
+                        </a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a href="./portfolio.html" class="site-nav__link">
+                            Портфолио
+                        </a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a href="" class="site-nav__link">
+                            Контакты
+                        </a>
+                    </li>
                 </ul>
             </nav>
             <ul class="contacts contacts__header">
@@ -162,10 +188,11 @@
             <h2 class="team-members__title">Наша команда</h2>
             <ul class="team-members__list">
                 <li class="team-members__card">
-                    <img src="./images/team/designer.jpg"
+                    <img class="team-members__photo"
+                    srcset="./images/team/mobile/designer-450.jpg 1x, ./images/team/mobile/designer-900.jpg 2x"
+                    src="./images/team/mobile/designer-450.jpg"
                     alt="Фотография Игоря Демьяненко"
-                    width="270"
-                    height="260">
+                    width="450">
                     <div class="team-members__description">
                         <h3 class="team-members__names">
                             Игорь Демьяненко
@@ -230,10 +257,10 @@
                     </div>
                 </li>
                 <li class="team-members__card">
-                    <img src="./images/team/frontend.jpg"
-                    alt="Фотография Ольги Репиной"
-                    width="270"
-                    height="260">
+                    <img class="team-members__photo"
+                    srcset="./images/team/mobile/frontend-450.jpg 1x, ./images/team/mobile/frontend-900.jpg 2x"
+                    src="./images/team/mobile/frontend-450.jpg"
+                    alt="Фотография Ольги Репиной">
                     <div class="team-members__description">
                         <h3 class="team-members__names">
                             Ольга Репина
@@ -298,10 +325,10 @@
                     </div>
                 </li>
                 <li class="team-members__card">
-                    <img src="./images/team/marketing.jpg"
-                    alt="Фотография Николая Тарасова"
-                    width="270"
-                    height="260">
+                    <img class="team-members__photo"
+                    srcset="./images/team/mobile/marketing-450.jpg 1x, ./images/team/mobile/marketing-900.jpg 2x"
+                    src="./images/team/mobile/marketing-450.jpg"
+                    alt="Фотография Николая Тарасова">
                     <div class="team-members__description">
                         <h3 class="team-members__names">
                             Николай Тарасов
@@ -365,10 +392,10 @@
                     </div>
                 </li>
                 <li class="team-members__card">
-                    <img src="./images/team/ui.jpg"
-                    alt="Фотография Михаила Ермакова"
-                    width="270"
-                    height="260">
+                    <img class="team-members__photo"
+                    srcset="./images/team/mobile/ui-450.jpg 1x, ./images/team/mobile/ui-900.jpg 2x"
+                    src="./images/team/mobile/ui-450.jpg"
+                    alt="Фотография Михаила Ермакова">
                     <div class="team-members__description">
                         <h3 class="team-members__names">
                             Михаил Ермаков
@@ -522,11 +549,102 @@
         </div>
     </section>
 </main>
+<div class="menu-container js-menu-container" id="mobile-menu">
+    <button class="menu-toggle js-close-menu">
+        <svg
+        class="menu-container__icon"
+        width="40"
+        height="40"
+        aria-label="Переключатель мобильного меню">
+            <use
+            class="menu__icon--closed"
+            href="./images/symbol-defs.svg#icon-close_24px"></use>
+        </svg>
+    </button>
+    <div class="menu-container__nav">
+        <ul class="menu-container__list">
+            <li class="menu-container__item">
+                <a href="./index.html"
+                class="menu-container__link">
+                    Студия
+                </a>
+            </li>
+            <li class="menu-container__item">
+                <a href="./portfolio.html"
+                class="menu-container__link">
+                    Портфолио
+                </a>
+            </li>
+            <li class="menu-container__item">
+                <a href=""
+                class="menu-container__link">
+                    Контакты
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="menu-container__contacts">
+        <ul class="menu-container__contacts-list">
+            <li class="menu-container__contacts-item">
+                <a href="mailto:info@devstudio.com"
+                class="menu-container__contact">
+                    info@devstudio.com
+                </a>
+            </li>
+            <li class="menu-container__contacts-item">
+                <a href="tel:+380961111111"
+                class="menu-container__contact">
+                    +38 096 111 11 11
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="menu-conteiner__socials">
+        <ul class="menu-container__social-list">
+            <li class="menu-container__social-items">
+                <a  href=""
+                class="menu-container__social-link"
+                target="_blank"
+                rel="noreferrer noopener"
+                title="Instagram">
+                    Instagram
+                </a>
+            </li>
+            <li class="menu-container__social-items">
+                <a href=""
+                class="menu-container__social-link"
+                target="_blank"
+                rel="noreferrer noopener"
+                title="Twitter">
+                    Twitter
+                </a>
+            </li>
+            <li class="menu-container__social-items">
+                <a href=""
+                class="menu-container__social-link"
+                target="_blank"
+                rel="noreferrer noopener"
+                title="Facebook">
+                    Facebook
+                </a>
+            </li>
+            <li class="menu-container__social-items">
+                <a href=""
+                class="menu-container__social-link"
+                target="_blank"
+                rel="noreferrer noopener"
+                title="Linked In">
+                    Linked In
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
 <!--Footer-->
 <footer class="page-footer">
     <div class="page-footer__content container">
         <div class="page-footer__contacts">
-            <a href="./index.html" class="logo-footer">Web<span class="logo--inverse">Studio</span></a>
+            <a href="./index.html" class="logo logo-footer">Web<span class="logo--inverse">Studio</span></a>
             <address class="footer-contacts">
                 <p class="footer-contacts__address">г. Киев, пр-т Леси Украинки, 26</p>
                 <ul class="footer-contacts__list">
@@ -626,16 +744,19 @@
 </footer>
 <div data-modal class="backdrop is-hidden">
     <div class="modal">
-        <button type="button" class="modal__button btn" data-modal-close>
+        <button
+        type="button"
+        class="modal__button btn"
+        data-modal-close>
             <svg class="modal__icon"
             width="11"
             height="11">
                 <use href="./images/icons.svg#icon-vector"></use>
             </svg>
         </button>
-        <b class="modal__title">
+        <p class="modal__title">
             Оставьте свои данные, мы вам перезвоним
-        </b>
+        </p>
         <form class="personal-data">
                 <label class="personal-data__input">
                     <span class="personal-data__type">
@@ -707,5 +828,14 @@
     </div>
 </div>
 <script src="./js/modal.js"></script>
+<script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    >
+</script>
+<script defer src="js/mobile-menu.js">
+</script>
 </body>
 </html>

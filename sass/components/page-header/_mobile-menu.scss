@@ -1,0 +1,149 @@
+.page-header__button {
+    margin: 0;
+    padding: 12px 8px;
+    background-color: transparent;
+   
+    @extend %btn;
+
+    @media screen and (min-width: $tablet) {
+        display: none;
+    }
+}
+
+.page-header__icon {
+    fill: #000000;
+
+    @include animation(fill);
+
+    .page-header__button:hover &,
+    .mpage-header__button:focus & {
+        fill: $accent-color;        
+    }
+}
+
+.menu-toggle {
+    @extend %btn;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    margin: 0;
+    padding: 11px;
+}
+
+.menu-container__icon {
+    fill: #000000;
+
+    .menu-toggle:hover &,
+    .menu-toggle:focus & {
+        fill: $accent-color;
+    }
+}
+
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 480px;
+    height: 100vh;
+
+    z-index: 999;
+
+    padding-top: 48px;
+    padding-bottom: 48px;
+    padding-left: 40px;
+
+    background-color: #ffffff;
+
+    transform: translateX(100%);
+    @include animation(transform);
+
+    @media screen and (min-width: $mobile) {
+        display: none;
+    }
+}
+
+.menu-container.is-open {
+    transform: translateX(0);
+}
+
+.menu-container__list,
+.menu-container__contacts-list,
+.menu-container__social-list {
+    @extend %list;
+}
+
+.menu-container__item + .menu-container__item {
+    margin-top: 32px;
+}
+
+.menu-container__link {
+    color: $title-text-color;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+
+    text-decoration: none;
+
+    &:hover, &:focus {
+        color: $accent-color;
+    }
+}
+
+.menu-container__contacts {
+    margin-top: 302px;
+}
+
+.menu-container__contact {
+    color: #757575;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+
+    text-decoration: none;
+
+    &:hover, &:focus {
+        color: $accent-color;
+        font-size: 34px;
+        line-height: 1.18;
+    }
+}
+
+.menu-container__contacts-item + .menu-container__contacts-item {
+    margin-top: 32px;
+
+    border-left: 22px;
+}
+
+.menu-container__social-list {
+    display: flex;
+    margin-top: 64px;
+}
+
+.menu-container__social .menu-container__social-items + .menu-container__social-items {
+    margin-left: 20px;
+}
+
+.menu-container__social-items {
+    padding: 0px 10px;
+    height: 22px;
+
+    border-left: 1px solid rgba(33, 33, 33, 0.2);
+
+    &:nth-child(1) {
+        border-left: none;
+        padding-left: 0;
+    }
+}
+
+.menu-container__social-link {
+    color: $accent-color;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+
+    text-decoration: none;
+}

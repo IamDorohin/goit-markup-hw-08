@@ -1,5 +1,12 @@
 .competencies {
-    padding-bottom: 94px;
+
+    @media screen and (max-width: 1199px) {
+        display: none;
+    }
+
+    @media screen and (min-width: $desktop) {
+        padding-bottom: 94px;
+    }
 }
 
 .competencies__title {
@@ -9,7 +16,6 @@
 .competencies__list {
     @extend %list;
     display: flex;
-    padding-left: 0;
 }
 
 .competencies__card + .competencies__card {
@@ -27,6 +33,7 @@
     height: 70px;
     bottom: 0;
     left: 0;
+
     @include verticalCentredPaddings(27px);
     
     background: rgba(47, 48, 58, 0.8);
@@ -34,5 +41,9 @@
     font-weight: 700;
     color: #ffffff;
     text-transform: uppercase;
-    line-height: 1.19;
+    line-height: 1.14;
+
+    @media screen and (min-width: $desktop) {
+        line-height: 1.19;
+    }
 }

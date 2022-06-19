@@ -1,6 +1,9 @@
-.logo-header {
+.logo {
     @extend %logo;
-    margin-right: 93px;
+}
+
+.logo-header {
+    // margin-right: 276px;
 }
 
 .logo--colored {

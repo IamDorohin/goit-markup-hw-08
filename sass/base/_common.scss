@@ -15,12 +15,31 @@ body {
     font-size: 14px;
 }
 
+body.modal-open {
+    overflow: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;    
+}
+
 .competencies__title,
 .team-members__title,
 .clients__title {
     color: #212121;
     font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
     text-align: center;
+
+    @media screen and (max-width: 767px) {
+        font-size: 28px;
+        line-height: 1.18;
+    } 
+
+    @media screen and (min-width: $desktop) {
+        font-size: 36px;
+        line-height: 1.17;
+    }
+
 }
