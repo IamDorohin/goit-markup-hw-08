@@ -1,6 +1,10 @@
 .social-networks {
     display: inline-block;
 
+    @media screen and (max-width: 767px) {
+        margin-top: 60px;
+    }
+    
     @media screen and(min-width: $tablet){
         margin-left: 165px;
     }
