@@ -10,12 +10,21 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        // width: 450px;
+        
+    }
+
+    @media screen and (max-width: 1199px) {
+        width: 450px;
+        max-height: 609px;
+        height: 100%;
+        overflow-y: scroll;
     }
 
     @media screen and (min-width: $desktop) {
         width: 528px;
-        height: 581px;
+        max-height: 581px;
+        height: 100%;
+        overflow-y: scroll;
     }
 }
 
@@ -194,9 +203,6 @@
     height: 15px;
     cursor: pointer;
 
-    // margin-left: auto;
-    // margin-right: auto;
-
     filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.25));
 
     @include animation(filter);
@@ -225,7 +231,6 @@
 
 .personal-data__ckeck-icon {
     display: inline-block;
-    // margin-right: 8px;
     width: 16px;
     height: 15px;
     cursor: pointer;
@@ -260,16 +265,22 @@
     color: $primary-text-color;
     font-size: 12px;
     line-height: 1.17;
-    // line-height: 1.71;
     letter-spacing: 0.03em;
+
+    @media screen and (min-width: $desktop) {
+        line-height: 1.71;
+    }
 }
 
 .personal-data__conditions {
     color: $accent-color;
     font-size: 12px;
     line-height: 1.17;
-    // line-height: 1.71;
     letter-spacing: 0.03em;
+
+    @media screen and (min-width: $desktop) {
+        line-height: 1.71;
+    }
 }
 
 .personal-data__button {
