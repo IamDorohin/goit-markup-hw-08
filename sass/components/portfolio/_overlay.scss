@@ -1,8 +1,6 @@
 .overlay {
     position: relative;
     overflow: hidden;
-    width: 370px;
-    height: 294px;
 }
 
 .overlay__description {
@@ -25,4 +23,15 @@
     .project-card:focus & {
         transform: translateY(0%);
     }
+
+    // @media screen and (min-width: $tablet) {
+    //     padding-top: 49px;
+    //     padding-right: 24px;
+    //     padding-bottom: 77px;
+    //     padding-left: 24px;
+    // }
+
+    // @media screen and (min-width: $tablet) {
+    //     padding: 63px 24px;
+    // }
 }
