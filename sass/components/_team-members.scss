@@ -54,7 +54,10 @@
 }
 
 .team-members__card + .team-members__card {
-    margin-top: 30px;
+    
+    @media screen and (max-width: 767px) {
+        margin-top: 30px;
+    }
 
     @media screen and (min-width: $tablet) {
         margin-top: 0;
