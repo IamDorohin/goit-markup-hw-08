@@ -23,7 +23,7 @@
     }
 }
 
-contacts .contacts__link {
+.contacts .contacts__link {
     @media screen and (min-width: $desktop) {
         @include centred-Flex();
         @include verticalCentredPaddings(32px);
