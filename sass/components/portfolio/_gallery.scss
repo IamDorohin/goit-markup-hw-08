@@ -41,6 +41,10 @@
         &:nth-last-child(-n + 1) {
             margin-right: 0;
         }
+
+        &:nth-child(3) {
+            margin-right: 0;
+        }
     }
 
     @media screen and (min-width: $tablet) {
@@ -119,6 +123,7 @@
     
         &:nth-last-child(-n + 1) {
             margin-bottom: 0;
+            margin-right: 0;
         }
     }    
 
