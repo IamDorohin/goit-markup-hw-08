@@ -243,6 +243,9 @@ p {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
   }
 }
 
@@ -1383,7 +1386,6 @@ p {
     width: 528px;
     max-height: 581px;
     height: 100%;
-    overflow-y: scroll;
   }
 }
 
