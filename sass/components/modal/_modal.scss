@@ -197,7 +197,7 @@
 }
 
 .personal-data__checkbox {
-    @include centred-Flex();
+    display: block;
     width: 100%;
     max-width: 370px;
     height: 15px;
